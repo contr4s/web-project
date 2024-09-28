@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="скалолазы, социальная сеть, трассы, новости">
+    <meta name="description" content="Социальная сеть для скалолазов. Сохраняйте пройденные трассы и делитесь своими успехами с друзьями.">
+    <title>Социальная сеть для скалолазов</title>
+    <link rel="stylesheet" href="outlines.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Логотип сайта">
+        <h1>White Rock</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Профиль</a></li>
+                <li><a href="#">Друзья</a></li>
+                <li><a href="#">Трассы</a></li>
+                <li><a href="#">Скаладромы</a></li>
+            </ul>
+        </nav>
+        <form action="/search" method="get">
+            <input type="text" name="query" placeholder="Поиск...">
+        </form>
+    </header>
+
+    <main>
+        <section id="news-feed">
+            <h2>Новости друзей</h2>
+            <article>
+                <h3>Петр Петров прошел трассу "Скалистый Дракон"</h3>
+                <p>Сложность: 5A+. Длина: 250 м. Место: скаладром Эль Каптан</p>
+                <img src="petr_petrov_activity.jpg" alt="Петр Петров на трассе Скалистый Дракон">
+            </article>
+        </section>
+
+        <aside id="user-profile">
+            <h2>Профиль пользователя</h2>
+            <img src="user_avatar.jpg" alt="Аватар пользователя">
+            <h3>Иван Иванов</h3>
+            <p>Пройдено трасс: 15</p>
+            <p>Средняя сложность: 5A</p>
+            <button onclick="addActivity()">Добавить активность</button>
+        </aside>
+
+        <p>Код на Python для вычисления средней сложности пройденных трасс:</p>
+        <code>
+        def calculate_average_difficulty(routes):
+            total_difficulty = sum(route['difficulty'] for route in routes)
+            return total_difficulty / len(routes)
+        </code>
+
+        <aside id="reccomendations">
+            <h2>Рекомендации друзей</h2>
+            <ul>
+                <li>
+                    <img src="friend2_avatar.jpg" alt="Аватар друга 2">
+                    <a href="#">Анна Иванова</a>
+                </li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <pre>
+__        ___     _ _         ____            _    
+\ \      / / |__ (_) |_ ___  |  _ \ ___   ___| | __
+ \ \ /\ / /| '_ \| | __/ _ \ | |_) / _ \ / __| |/ /
+  \ V  V / | | | | | ||  __/ |  _ < (_) | (__|   < 
+   \_/\_/  |_| |_|_|\__\___| |_| \_\___/ \___|_|\_\
+        </pre>
+        <blockquote></blockquote>
+            <p>"Мозг - это самая важная мышца в скалолазании"</p>
+        </blockquote>
+        <p><var>Успех</var> = <var><strong>Тренировки</strong></var> + <var>Настойчивость</var> + <var>Страсть</var></p>
+        <nav>
+            <ul>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Политика конфиденциальности</a></li>
+                <li><a href="#">Условия использования</a></li>
+                <li><a href="#">Поддержка</a></li>
+            </ul>
+        </nav>
+        <p>Следите за нами в социальных сетях:</p>
+        <ul>
+            <li><a href="#"><img src="facebook_icon.png" alt="Facebook"></a></li>
+            <li><a href="#"><img src="instagram_icon.png" alt="Instagram"></a></li>
+            <li><a href="#"><img src="twitter_icon.png" alt="Twitter"></a></li>
+        </ul>
+    </footer>
+</body>
+</html>
