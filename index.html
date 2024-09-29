@@ -4,89 +4,116 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="скалолазы, социальная сеть, трассы, новости">
     <meta name="description" content="Социальная сеть для скалолазов. Сохраняйте пройденные трассы и делитесь своими успехами с друзьями.">
-    <title>Социальная сеть для скалолазов</title>
-    <link rel="stylesheet" href="outlines.css">
+    <title>White Rock</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="Логотип сайта">
-        <h1>White Rock</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Профиль</a></li>
-                <li><a href="#">Друзья</a></li>
-                <li><a href="#">Трассы</a></li>
-                <li><a href="#">Скаладромы</a></li>
-            </ul>
-        </nav>
-        <form action="/search" method="get">
-            <input type="text" name="query" placeholder="Поиск...">
+    <header class="header">
+        <img src="resources/logo.png" alt="Логотип сайта" class="logo">
+        <h1 class="title">White Rock</h1>
+        <form class="search-form">
+            <input type="text" placeholder="Поиск" class="search-input">
         </form>
+        <img src="resources/avatar.png" alt="Аватар пользователя" class="user-avatar">
     </header>
 
-    <main>
-        <section id="news-feed">
-            <h2>Новости друзей</h2>
-            <article>
-                <h3>Петр Петров прошел трассу "Скалистый Дракон"</h3>
-                <p>Сложность: 5A+. Длина: 250 м. Место: скаладром Эль Каптан</p>
-                <img src="petr_petrov_activity.jpg" alt="Петр Петров на трассе Скалистый Дракон">
-            </article>
-        </section>
+    <main class="main">
+        <class="navigation">
+            <ul class="navigation-list">
+                <li><a href="#" class="nav-link">Главная</a></li>
+                <li><a href="#" class="nav-link">Профиль</a></li>
+                <li><a href="#" class="nav-link">Друзья</a></li>
+                <li><a href="#" class="nav-link">Трассы</a></li>
+                <li><a href="#" class="nav-link">Скаладромы</a></li>
+            </ul>
+        </nav>
 
-        <aside id="user-profile">
-            <h2>Профиль пользователя</h2>
-            <img src="user_avatar.jpg" alt="Аватар пользователя">
-            <h3>Иван Иванов</h3>
-            <p>Пройдено трасс: 15</p>
-            <p>Средняя сложность: 5A</p>
-            <button onclick="addActivity()">Добавить активность</button>
-        </aside>
+        <button class="special-button">Добавить активность</button>
 
-        <p>Код на Python для вычисления средней сложности пройденных трасс:</p>
-        <code>
-        def calculate_average_difficulty(routes):
-            total_difficulty = sum(route['difficulty'] for route in routes)
-            return total_difficulty / len(routes)
-        </code>
-
-        <aside id="reccomendations">
-            <h2>Рекомендации друзей</h2>
-            <ul>
-                <li>
-                    <img src="friend2_avatar.jpg" alt="Аватар друга 2">
-                    <a href="#">Анна Иванова</a>
+        <section id="news-feed" class="news-feed">
+            <h2 class="section-title">Новости друзей</h2>
+            <ul class="news-list">
+                <li class="news-list-item">
+                    <img src="resources/avatar.png" alt="Аватар друга 3" class="user-avatar">
+                    <a class="user-name">Петр Петров</a> 
+                    <time datetime="2024-10-05T12:23" class="time">Сегодня 12:23</a>
+                    <article class="news-article">
+                        <p class="article-title">Я посетил скалодром <a class="climbing-wall" href="#">Эль капитан</a></p>
+                        <p class="article-text">Пролез 10 трасс: </p>
+                        <ul class="routes-list">
+                            <li class="routes-list-item">4 трассы 5b</li>
+                            <li class="routes-list-item">3 трассы 5c</li>
+                            <li class="routes-list-item">2 трассы 5c+</li>
+                            <li class="routes-list-item">1 трасса 6a</li>
+                        </ul>
+                    </article>
+                    <img src="resources/climbing1.jpg" alt="Петр Петров на трассе 6a" class="news-item-image">
+                </li>
+                <li class="news-list-item">
+                    <img src="resources/avatar.png" alt="Аватар друга 3" class="user-avatar">
+                    <a class="user-name">Павел Петров</a> 
+                    <time datetime="2024-10-05T10:23" class="time">Сегодня 10:23</a>
+                    <article class="news-article">
+                        <p class="article-title">Я посетил скалодром <a class="climbing-wall" href="#">Эль капитан</a></p>
+                        <p class="article-text">Пролез 10 трасс: </p>
+                        <ul class="routes-list">
+                            <li class="routes-list-item">7 трассы 5c</li>
+                            <li class="routes-list-item">2 трассы 5c+</li>
+                            <li class="routes-list-item">1 трасса 6a</li>
+                        </ul>
+                    </article>
+                    <img src="resources/climbing2.jpg" alt="Павел Петров на трассе 6a" class="news-item-image">
                 </li>
             </ul>
+        </section>
+
+        <section id="recommendations" class="recommendations">
+            <h3 class="section-title">Рекомендации друзей</h3>
+            <ul class="friend-list">
+                <li class="friend-list-item">
+                    <img src="resources/avatar.png" alt="Аватар друга 1" class="user-avatar">
+                    <a class="user-name">Анна Иванова</a>
+                    <p class="user-stats">Пройдено трасс: 15</p>
+                    <p class="user-stats">Средняя сложность: 5A</p>
+                    <p class="user-info">Город: Санкт-Петербург</p>
+                    <p class="user-info">Любимый скалодром: <a class="climbing-wall" href="#">Северная стена</a></p>
+                    <button class="add-friend-button">Добавить в друзья</button>
+                </li>
+                <li class="friend-list-item">
+                    <img src="resources/avatar.png" alt="Аватар друга 2" class="user-avatar">
+                    <a class="user-name">Андрей Иванов</a>
+                    <p class="user-stats">Пройдено трасс: 150</p>
+                    <p class="user-stats">Средняя сложность: 6A</p>
+                    <p class="user-info">Город: Санкт-Петербург</p>
+                    <p class="user-info">Любимый скалодром: <a class="climbing-wall" href="#">Северная стена</a></p>
+                    <button class="add-friend-button">Добавить в друзья</button>
+                </li>
+            </ul>
+        </section>
+
+        <aside>
+            <p class="python-code">Код на Python для вычисления средней сложности пройденных трасс:</p>
+            <pre><code class="python-code">
+def calculate_average_difficulty(routes):
+    total_difficulty = sum(route['difficulty'] for route in routes)
+    return total_difficulty / len(routes)
+            </code></pre>
         </aside>
     </main>
 
-    <footer>
-        <pre>
-__        ___     _ _         ____            _    
+    <footer class="footer">
+        <pre class="footer-logo">
 \ \      / / |__ (_) |_ ___  |  _ \ ___   ___| | __
  \ \ /\ / /| '_ \| | __/ _ \ | |_) / _ \ / __| |/ /
-  \ V  V / | | | | | ||  __/ |  _ < (_) | (__|   < 
+  \ V  V / | | | | | ||  __/ |  _ < (_) | (__|   <
    \_/\_/  |_| |_|_|\__\___| |_| \_\___/ \___|_|\_\
         </pre>
-        <blockquote></blockquote>
-            <p>"Мозг - это самая важная мышца в скалолазании"</p>
-        </blockquote>
-        <p><var>Успех</var> = <var><strong>Тренировки</strong></var> + <var>Настойчивость</var> + <var>Страсть</var></p>
-        <nav>
-            <ul>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Политика конфиденциальности</a></li>
-                <li><a href="#">Условия использования</a></li>
-                <li><a href="#">Поддержка</a></li>
-            </ul>
-        </nav>
-        <p>Следите за нами в социальных сетях:</p>
-        <ul>
-            <li><a href="#"><img src="facebook_icon.png" alt="Facebook"></a></li>
-            <li><a href="#"><img src="instagram_icon.png" alt="Instagram"></a></li>
-            <li><a href="#"><img src="twitter_icon.png" alt="Twitter"></a></li>
+        <p class="quote"><cite>Вольфган Гюллих</cite>: <q>Мозг - это самая важная мышца в скалолазании</q></p>
+        <p class="equation"><var>Успех</var> = <var><strong>Тренировки</strong></var> + <var>Настойчивость</var> + <var>Страсть</var></p>
+        <ul class="navigation-list">
+            <li><a href="#" class="footer-link">Политика конфиденциальности</a></li>
+            <li><a href="#" class="footer-link">Условия использования</a></li>
+            <li><a href="#" class="footer-link">Поддержка</a></li>
         </ul>
     </footer>
 </body>

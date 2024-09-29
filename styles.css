@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+}
+
+pre {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    color: #333;
+    padding: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+}
+
+.news-item-image {
+    width: 400px;
+    height: 400px;
+}
+
+.routes-list-item {
+    margin: 0px 80px;
+}
+
+
+.header {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.navigation-list {
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.search-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.section-title {
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.special-button {
+    font-size: 16px;
+    color: #fff;;
+    background-color: #4e98e7fe;
+}
+
+.climbing-wall {
+    text-decoration: none;
+}
+
+.news-list,
+.friend-list {
+    list-style: none;
+}
+
+.news-list-item,
+.friend-list-item {
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+button:hover,
+.user-profile:hover,
+.news-list-item:hover,
+.friend-list-item:hover,
+.user-avatar:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-input:hover {
+    border-color: #007bff;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+.climbing-wall:hover {
+    text-decoration: underline;
+}
