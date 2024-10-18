@@ -7,7 +7,7 @@
 
 main {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 20px;
 }
 
@@ -86,6 +86,22 @@ button:hover {
     margin: 0px 40px;
 }
 
+.l-post-header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+
+.l-post-header .user-name {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-width: 0;
+    white-space: nowrap;
+    margin-right: 10px;
+}
+
 .l-header {
     padding: 20px;
     display: flex;
@@ -98,10 +114,12 @@ button:hover {
 }
 
 .l-sidebar-left {
-    position: sticky;
     width: 150px;
-    height: auto;
-    top: 120px;
+    margin: 10px;
+}
+
+.l-sidebar-right {
+    width: 380px;
     margin: 10px;
 }
 
@@ -124,6 +142,12 @@ button:hover {
 
 .l-right-popup:hover::before {
     content: "Добавить активность";
+}
+
+@media screen and (max-width: 1100px) {
+    .l-mobile-hidden {
+        display: none;
+    }
 }
 
 /* Module */
@@ -169,7 +193,7 @@ button:hover {
 
 .section-title {
     font-weight: bold;
-    text-align: left;
+    text-align: center;
     text-transform: uppercase;
     margin-bottom: 10px;
     color: #333;
@@ -196,21 +220,4 @@ button:hover {
     border: 1px solid #ddd;
     border-radius: 10px;
     background-color: #ffffff;
-}
-
-.post-header,
-.recommendations-header {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-}
-
-.post-header-info,
-.content-list .user-name {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
-    min-width: 0;
-    white-space: nowrap;
-    margin-right: 10px;
 }
