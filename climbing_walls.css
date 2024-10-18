@@ -1,0 +1,66 @@
+.climbing-walls {
+    flex-basis: 100%;
+    max-width: 100%;
+}
+
+.table-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.table-header,
+.table-row {
+    display: contents;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.table-cell {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: normal;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-header .table-cell {
+    background-color: #c8c7c7;
+    font-weight: bold;
+}
+
+.table-row:nth-child(even) .table-cell {
+    background-color: #ededed;
+}
+
+.table-row:nth-child(odd) .table-cell {
+    background-color: #fff;
+}
+
+@media screen and (max-width: 900px) {
+    .table-container,
+    .table-header,
+    .table-row {
+        grid-template-columns: repeat(10, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .table-container,
+    .table-header,
+    .table-row {
+        grid-template-columns: repeat(10, 1fr);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .table-container,
+    .table-header,
+    .table-row {
+        grid-template-columns: repeat(10, 1fr);
+    }
+}
