@@ -1,7 +1,22 @@
+/* Base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+header {
+    background-color: #fff;
+    position: sticky;
+    height: 100px;
+    top: 0;
+    z-index: 10;
 }
 
 body {
@@ -14,6 +29,13 @@ body {
     word-spacing: 1px;
     display: flex;
     flex-direction: column;
+}
+
+footer {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 pre {
@@ -33,8 +55,13 @@ button {
     text-transform: uppercase;
     cursor: pointer;
 }
+button:hover
+{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 
+/* Layout */
 .logo {
     width: 100px;
     height: 100px;
@@ -51,17 +78,52 @@ button {
 }
 
 .routes-list-item {
-    margin: 0px 80px;
+    margin: 0px 40px;
 }
 
-
-.header {
-    background-color: #fff;
+.l-header {
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.l-search {
+    padding: 10px;
+}
+
+.l-sidebar-left {
+    position: sticky;
+    width: 150px;
+    height: auto;
+    top: 120px;
+    margin: 10px;
+}
+
+.l-right-popup {
+    position: fixed;
+    z-index: 5;
+    right: 0px;
+    top: 120px;
+    height: 40px;
+    padding: 5px;
+}
+.l-right-popup:hover {
+    padding: 10px 20px;
+}
+.l-right-popup::before {
+    content: "+";
+}
+.l-right-popup:hover::before {
+    content: "Добавить активность";
+}
+
+/* Module */
+.shadow {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.shadow:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .title {
@@ -71,32 +133,28 @@ button {
     color: #333;
 }
 
-.navigation-list {
+.content-list {
     list-style: none;
 }
 
 .nav-link {
     text-decoration: none;
     color: #333;
-    margin-left: 20px;
     font-size: 18px;
     font-weight: normal;
     text-transform: uppercase;
 }
-
-.search-input {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.nav-link:hover {
+    color: #007bff;
 }
 
-.main {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    flex-wrap: wrap;
-    flex-grow: 1;
+.round-border {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.round-border:hover {
+    border-color: #007bff;
 }
 
 .section-title {
@@ -116,46 +174,14 @@ button {
 .climbing-wall {
     text-decoration: none;
 }
-
-.news-list,
-.friend-list {
-    list-style: none;
+.climbing-wall:hover {
+    text-decoration: underline;
 }
 
-.news-list-item,
-.friend-list-item {
+.content-list-item {
     padding: 20px;
     margin: 10px;
     border: 1px solid #ddd;
     border-radius: 10px;
     background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.footer {
-    background-color: #fff;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-}
-
-
-button:hover,
-.user-profile:hover,
-.news-list-item:hover,
-.friend-list-item:hover,
-.user-avatar:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.search-input:hover {
-    border-color: #007bff;
-}
-
-.nav-link:hover {
-    color: #007bff;
-}
-
-.climbing-wall:hover {
-    text-decoration: underline;
 }

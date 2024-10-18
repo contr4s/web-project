@@ -8,37 +8,37 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
+    <header class="l-header shadow">
         <img src="resources/logo.png" alt="Логотип сайта" class="logo">
         <h1 class="title">White Rock</h1>
         <form class="search-form">
-            <input type="text" placeholder="Поиск" class="search-input">
+            <input type="text" placeholder="Поиск" class="l-search round-border shadow">
         </form>
         <img src="resources/avatar.png" alt="Аватар пользователя" class="user-avatar">
     </header>
 
-    <main class="main">
-        <class="navigation">
-            <ul class="navigation-list">
-                <li><a href="#" class="nav-link">Главная</a></li>
+    <main>
+        <nav class="l-sidebar-left">
+            <ul class="content-list">
+                <li><a href="/index.html" class="nav-link">Главная</a></li>
                 <li><a href="#" class="nav-link">Профиль</a></li>
                 <li><a href="#" class="nav-link">Друзья</a></li>
                 <li><a href="#" class="nav-link">Трассы</a></li>
-                <li><a href="/climbing_wall.html" class="nav-link">Скаладромы</a></li>
+                <li><a href="/climbing_wall.html" class="nav-link">Скалодромы</a></li>
             </ul>
         </nav>
 
-        <button class="special-button">Добавить активность</button>
+        <button class="l-right-popup special-button"></button>
 
         <section id="news-feed" class="news-feed">
             <h2 class="section-title">Новости друзей</h2>
-            <ul class="news-list">
-                <li class="news-list-item">
+            <ul class="content-list">
+                <li class="content-list-item shadow">
                     <img src="resources/avatar.png" alt="Аватар друга 3" class="user-avatar">
                     <a class="user-name">Петр Петров</a> 
                     <time datetime="2024-10-05T12:23" class="time">Сегодня 12:23</a>
                     <article class="news-article">
-                        <p class="article-title">Я посетил скалодром <a class="climbing-wall" href="#">Эль капитан</a></p>
+                        <p class="article-title">Я посетил скалодром <a class="climbing-wall" href="/climbing_wall.html">Эль капитан</a></p>
                         <p class="article-text">Пролез 10 трасс: </p>
                         <ul class="routes-list">
                             <li class="routes-list-item">4 трассы 5b</li>
@@ -49,12 +49,12 @@
                     </article>
                     <img src="resources/climbing1.jpg" alt="Петр Петров на трассе 6a" class="news-item-image">
                 </li>
-                <li class="news-list-item">
+                <li class="content-list-item shadow">
                     <img src="resources/avatar.png" alt="Аватар друга 3" class="user-avatar">
                     <a class="user-name">Павел Петров</a> 
                     <time datetime="2024-10-05T10:23" class="time">Сегодня 10:23</a>
                     <article class="news-article">
-                        <p class="article-title">Я посетил скалодром <a class="climbing-wall" href="#">Эль капитан</a></p>
+                        <p class="article-title">Я посетил скалодром <a class="climbing-wall" href="/climbing_wall.html">Эль капитан</a></p>
                         <p class="article-text">Пролез 10 трасс: </p>
                         <ul class="routes-list">
                             <li class="routes-list-item">7 трассы 5c</li>
@@ -69,39 +69,30 @@
 
         <section id="recommendations" class="recommendations">
             <h3 class="section-title">Рекомендации друзей</h3>
-            <ul class="friend-list">
-                <li class="friend-list-item">
+            <ul class="content-list">
+                <li class="content-list-item shadow">
                     <img src="resources/avatar.png" alt="Аватар друга 1" class="user-avatar">
                     <a class="user-name">Анна Иванова</a>
                     <p class="user-stats">Пройдено трасс: 15</p>
                     <p class="user-stats">Средняя сложность: 5A</p>
                     <p class="user-info">Город: Санкт-Петербург</p>
-                    <p class="user-info">Любимый скалодром: <a class="climbing-wall" href="#">Северная стена</a></p>
+                    <p class="user-info">Любимый скалодром: <a class="climbing-wall" href="/climbing_wall.html">Северная стена</a></p>
                     <button class="add-friend-button">Добавить в друзья</button>
                 </li>
-                <li class="friend-list-item">
+                <li class="content-list-item shadow">
                     <img src="resources/avatar.png" alt="Аватар друга 2" class="user-avatar">
                     <a class="user-name">Андрей Иванов</a>
                     <p class="user-stats">Пройдено трасс: 150</p>
                     <p class="user-stats">Средняя сложность: 6A</p>
                     <p class="user-info">Город: Санкт-Петербург</p>
-                    <p class="user-info">Любимый скалодром: <a class="climbing-wall" href="#">Северная стена</a></p>
+                    <p class="user-info">Любимый скалодром: <a class="climbing-wall" href="/climbing_wall.html">Северная стена</a></p>
                     <button class="add-friend-button">Добавить в друзья</button>
                 </li>
             </ul>
         </section>
-
-        <aside>
-            <p class="python-code">Код на Python для вычисления средней сложности пройденных трасс:</p>
-            <pre><code class="python-code">
-def calculate_average_difficulty(routes):
-    total_difficulty = sum(route['difficulty'] for route in routes)
-    return total_difficulty / len(routes)
-            </code></pre>
-        </aside>
     </main>
 
-    <footer class="footer">
+    <footer>
         <pre class="footer-logo">
 \ \      / / |__ (_) |_ ___  |  _ \ ___   ___| | __
  \ \ /\ / /| '_ \| | __/ _ \ | |_) / _ \ / __| |/ /
@@ -110,7 +101,7 @@ def calculate_average_difficulty(routes):
         </pre>
         <p class="quote"><cite>Вольфган Гюллих</cite>: <q>Мозг - это самая важная мышца в скалолазании</q></p>
         <p class="equation"><var>Успех</var> = <var><strong>Тренировки</strong></var> + <var>Настойчивость</var> + <var>Страсть</var></p>
-        <ul class="navigation-list">
+        <ul class="content-list">
             <li><a href="#" class="footer-link">Политика конфиденциальности</a></li>
             <li><a href="#" class="footer-link">Условия использования</a></li>
             <li><a href="#" class="footer-link">Поддержка</a></li>
