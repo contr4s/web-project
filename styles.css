@@ -55,8 +55,8 @@ button {
     text-transform: uppercase;
     cursor: pointer;
 }
-button:hover
-{
+
+button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -70,6 +70,11 @@ button:hover
 .user-avatar {
     width: 40px;
     height: 40px;
+    margin-right: 12px;
+}
+
+.time {
+    color: rgb(129, 140, 153);
 }
 
 .news-item-image {
@@ -108,12 +113,15 @@ button:hover
     height: 40px;
     padding: 5px;
 }
+
 .l-right-popup:hover {
     padding: 10px 20px;
 }
+
 .l-right-popup::before {
     content: "+";
 }
+
 .l-right-popup:hover::before {
     content: "Добавить активность";
 }
@@ -122,6 +130,7 @@ button:hover
 .shadow {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .shadow:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -144,6 +153,7 @@ button:hover
     font-weight: normal;
     text-transform: uppercase;
 }
+
 .nav-link:hover {
     color: #007bff;
 }
@@ -167,13 +177,15 @@ button:hover
 
 .special-button {
     font-size: 16px;
-    color: #fff;;
+    color: #fff;
+    ;
     background-color: #4e98e7fe;
 }
 
 .climbing-wall {
     text-decoration: none;
 }
+
 .climbing-wall:hover {
     text-decoration: underline;
 }
@@ -184,4 +196,21 @@ button:hover
     border: 1px solid #ddd;
     border-radius: 10px;
     background-color: #ffffff;
+}
+
+.post-header,
+.recommendations-header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.post-header-info,
+.content-list .user-name {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-width: 0;
+    white-space: nowrap;
+    margin-right: 10px;
 }
