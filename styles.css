@@ -73,13 +73,10 @@ button:hover {
     margin-right: 12px;
 }
 
-.time {
-    color: rgb(129, 140, 153);
-}
-
 .news-item-image {
-    width: 400px;
-    height: 400px;
+    width: auto;
+    height: auto;
+    max-width: 500px;
 }
 
 .routes-list-item {
@@ -119,6 +116,9 @@ button:hover {
 }
 
 .l-sidebar-right {
+    position: sticky;
+    top: 120px;
+    height: fit-content;
     width: 380px;
     margin: 10px;
 }
@@ -220,4 +220,8 @@ button:hover {
     border: 1px solid #ddd;
     border-radius: 10px;
     background-color: #ffffff;
+}
+
+.time {
+    color: rgb(129, 140, 153);
 }

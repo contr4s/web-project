@@ -1,8 +1,3 @@
-.climbing-walls {
-    flex-basis: 100%;
-    max-width: 100%;
-}
-
 .table-container {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
@@ -28,19 +23,6 @@
     justify-content: center;
 }
 
-.table-header .table-cell {
-    background-color: #c8c7c7;
-    font-weight: bold;
-}
-
-.table-row:nth-child(even) .table-cell {
-    background-color: #ededed;
-}
-
-.table-row:nth-child(odd) .table-cell {
-    background-color: #fff;
-}
-
 @media screen and (max-width: 900px) {
     .table-container,
     .table-header,
@@ -63,4 +45,17 @@
     .table-row {
         grid-template-columns: repeat(10, 1fr);
     }
+}
+
+.table-header .table-cell {
+    background-color: #c8c7c7;
+    font-weight: bold;
+}
+
+.table-row:nth-child(even) .table-cell {
+    background-color: #ededed;
+}
+
+.table-row:nth-child(odd) .table-cell {
+    background-color: #fff;
 }
