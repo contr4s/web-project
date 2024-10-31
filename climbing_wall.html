@@ -5,8 +5,10 @@
     <meta name="keywords" content="скалолазы, социальная сеть, трассы, новости">
     <meta name="description" content="Социальная сеть для скалолазов. Сохраняйте пройденные трассы и делитесь своими успехами с друзьями.">
     <title>White Rock - Скалодромы</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="climbing_walls.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/climbing_walls.css">
+    <script src="/scripts/loadStats.js" defer></script>
+    <script src="/scripts/activeMenu.js"></script>
 </head>
 <body>
     <header class="l-header shadow">
@@ -24,9 +26,8 @@
         <nav class="l-sidebar-left l-mobile-hidden">
             <ul class="content-list">
                 <li><a href="/index.html" class="nav-link">Главная</a></li>
-                <li><a href="#" class="nav-link">Профиль</a></li>
-                <li><a href="#" class="nav-link">Друзья</a></li>
-                <li><a href="#" class="nav-link">Трассы</a></li>
+                <li><a href="/profile.html" class="nav-link">Профиль</a></li>
+                <li><a href="/friends.html" class="nav-link">Друзья</a></li>
                 <li><a href="/climbing_wall.html" class="nav-link">Скалодромы</a></li>
             </ul>
         </nav>
@@ -104,6 +105,7 @@
   \ V  V / | | | | | ||  __/ |  _ < (_) | (__|   <
    \_/\_/  |_| |_|_|\__\___| |_| \_\___/ \___|_|\_\
         </pre>
+        <div id="load-stats"></div>
     </footer>
 </body>
 </html>

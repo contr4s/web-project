@@ -1,0 +1,28 @@
+.friends-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px;
+    justify-content: center;
+}
+
+.friends-grid-item {
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    padding: 20px 11px 20px;
+}
+
+.friends-grid-item img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.friends-grid-item .user-name {
+    font-size: 1.2em;
+    padding-top: 6px;
+    font-weight: bold;
+}

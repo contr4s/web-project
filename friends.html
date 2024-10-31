@@ -6,7 +6,8 @@
     <meta name="keywords" content="скалолазы, социальная сеть, трассы, новости">
     <meta name="description"
         content="Социальная сеть для скалолазов. Сохраняйте пройденные трассы и делитесь своими успехами с друзьями.">
-    <title>White Rock</title>
+    <title>White Rock - Друзья</title>
+    <link rel="stylesheet" href="/css/friends.css">
     <link rel="stylesheet" href="/css/styles.css">
     <script src="/scripts/loadStats.js" defer></script>
     <script src="/scripts/activeMenu.js"></script>
@@ -36,51 +37,41 @@
 
         <button class="l-right-popup special-button"></button>
 
-        <section id="news-feed" class="news-feed">
-            <h2 class="section-title">Новости друзей</h2>
-            <ul class="content-list">
-                <li class="content-list-item shadow">
+        <section id="friends" class="friends">
+            <h2 class="section-title">Мои друзья</h2>
+            <div class="friends-grid">
+                <div class="friends-grid-item shadow">
+                    <img src="resources/avatar.png" alt="Аватар друга 3" class="user-avatar">
                     <div class="l-post-header">
-                        <img src="resources/avatar.png" alt="Аватар друга 3" class="user-avatar">
-                        <div class="post-header-info">
-                            <a class="user-name">Петр Петров</a>
-                            <time datetime="2024-10-05T12:23" class="time">Сегодня 12:23</a>
-                        </div>
+                        <a class="user-name">Павел Петров</a>
                     </div>
-                    <article class="news-article">
-                        <p class="article-title">Я посетил скалодром <a class="climbing-wall"
-                                href="/climbing_wall.html">Эль капитан</a></p>
-                        <p class="article-text">Пролез 10 трасс: </p>
-                        <ul class="routes-list">
-                            <li class="routes-list-item">4 трассы 5b</li>
-                            <li class="routes-list-item">3 трассы 5c</li>
-                            <li class="routes-list-item">2 трассы 5c+</li>
-                            <li class="routes-list-item">1 трасса 6a</li>
-                        </ul>
-                    </article>
-                    <img src="resources/climbing1.jpg" alt="Петр Петров на трассе 6a" class="news-item-image">
-                </li>
-                <li class="content-list-item shadow">
+                </div>
+                <div class="friends-grid-item shadow">
+                    <img src="resources/avatar.png" alt="Аватар друга 4" class="user-avatar">
                     <div class="l-post-header">
-                        <img src="resources/avatar.png" alt="Аватар друга 3" class="user-avatar">
-                        <div class="post-header-info">
-                            <a class="user-name">Павел Петров</a>
-                            <time datetime="2024-10-05T10:23" class="time">Сегодня 10:23</a>
-                        </div>
+                        <a class="user-name">Павел Петров</a>
                     </div>
-                    <article class="news-article">
-                        <p class="article-title">Я посетил скалодром <a class="climbing-wall"
-                                href="/climbing_wall.html">Эль капитан</a></p>
-                        <p class="article-text">Пролез 10 трасс: </p>
-                        <ul class="routes-list">
-                            <li class="routes-list-item">7 трассы 5c</li>
-                            <li class="routes-list-item">2 трассы 5c+</li>
-                            <li class="routes-list-item">1 трасса 6a</li>
-                        </ul>
-                    </article>
-                    <img src="resources/climbing2.jpg" alt="Павел Петров на трассе 6a" class="news-item-image">
-                </li>
-            </ul>
+                </div>
+                <div class="friends-grid-item shadow">
+                    <img src="resources/avatar.png" alt="Аватар друга 5" class="user-avatar">
+                    <div class="l-post-header">
+                        <a class="user-name">Павел Петров</a>
+                    </div>
+                </div>
+                <div class="friends-grid-item shadow">
+                    <img src="resources/avatar.png" alt="Аватар друга 6" class="user-avatar">
+                    <div class="l-post-header">
+                        <a class="user-name">Павел Петров</a>
+                    </div>
+                </div>
+                <div class="friends-grid-item shadow">
+                    <img src="resources/avatar.png" alt="Аватар друга 7" class="user-avatar">
+                    <div class="l-post-header">
+                        <a class="user-name">Павел Петров</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="l-mobile-hidden l-sidebar-right recommendations">
