@@ -1,6 +1,9 @@
 (function() {
+    var startTime = new Date().getTime();
+
     window.addEventListener('load', function() {
-        const loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
+        var endTime = new Date().getTime();
+        var loadTime = endTime - startTime;
         const loadStatsElement = document.getElementById('load-stats');
         loadStatsElement.innerHTML = `Время загрузки страницы: ${loadTime} мс`;
     });
