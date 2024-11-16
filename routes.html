@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="скалолазы, социальная сеть, трассы, новости">
+    <meta name="description"
+        content="Социальная сеть для скалолазов. Сохраняйте пройденные трассы и делитесь своими успехами с друзьями.">
+    <title>White Rock</title>
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="scripts/routes.js"></script>
+    <script src="/scripts/activeMenu.js"></script>
+</head>
+<body>
+    <header class="l-header shadow">
+        <a href="/index.html"> 
+            <img src="resources/logo.png" alt="Логотип сайта" class="logo">
+        </a>
+        <h1 class="title">White Rock</h1>
+        <form class="search-form">
+            <input type="text" placeholder="Поиск" class="l-search round-border shadow">
+        </form>
+        <img src="resources/avatar.png" alt="Аватар пользователя" class="user-avatar">
+    </header>
+
+    <main class="main">
+        <nav class="l-sidebar-left l-mobile-hidden">
+            <ul class="content-list">
+                <li><a href="/index.html" class="nav-link">Главная</a></li>
+                <li><a href="/profile.html" class="nav-link">Профиль</a></li>
+                <li><a href="/friends.html" class="nav-link">Друзья</a></li>
+                <li><a href="/climbing_wall.html" class="nav-link">Скалодромы</a></li>
+                <li><a href="/routes.html" class="nav-link">Трассы</a></li>
+            </ul>
+        </nav>
+        <section class=l-content>
+            <h1>Заполни таблицу о пройденных трассах</h1>
+            <form id="reportForm">
+                <label for="gymName">Название скалодрома:</label>
+                <input type="text" id="gymName" required>
+
+                <label for="showRouteName">Показать название трассы?</label>
+                <input type="checkbox" id="showRouteName">
+
+                <label for="showFirstTry">Показать пройдена ли с первой попытки?</label>
+                <input type="checkbox" id="showFirstTry">
+
+                <label for="showDifficulty">Показать оценочную сложность?</label>
+                <input type="checkbox" id="showDifficulty">
+
+                <label for="showComment">Показать комментарий?</label>
+                <input type="checkbox" id="showComment">
+
+                <button type="submit">Создать таблицу</button>
+            </form>
+
+            <div id="resultContainer"></div>
+        </section>
+    </main>
+</body>
+</html>
