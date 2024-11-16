@@ -1,0 +1,92 @@
+label {
+    display: block;
+    margin-bottom: 5px;
+    align-items: center;
+}
+.form-container {
+    display: flex;
+    margin-top: 10px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-table-button {
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px; 
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.tableName {
+    color: #007bff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.tableInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px; 
+}
+
+/* Стили для таблицы */
+.reportTable {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.reportTable th,
+.reportTable td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.reportTable th {
+    background-color: #f8f9fa;
+}
+
+.deleteRow {
+   border:none;
+   padding: 5px 10px;
+   border-radius:3px;
+   cursor:pointer;
+   font-size: 12px;
+}
+
+.deleteRow,
+.deleteTable{
+    background-color:#dc3545;
+    color:white;
+}
+
+.deleteRow:hover, 
+.deleteTable:hover{
+   background-color:#c82333
+}
+
+.invalid {
+   border-bottom: 2px solid red;
+}
