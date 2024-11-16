@@ -21,26 +21,77 @@ document.addEventListener('DOMContentLoaded', () => {
         const tableContainer = document.createElement('div');
         tableContainer.classList.add('table-container');
 
-        let tableHTML = `<div class="tableInfo">
-                            <h2>${gymName}</h2>
-                            <div class="button-container">
-                                <button class="addRow">Добавить строку</button>
-                                <button class="deleteTable">Удалить таблицу</button>
-                            </div>
-                         </div>
-                         <table border='1' class="reportTable"><tr>`;
-        tableHTML += `<th data-column="Категория трассы">Категория трассы</th>
-                      <th data-column="Количество попыток">Количество попыток</th>`;
+        const tableInfo = document.createElement('div');
+        tableInfo.classList.add('tableInfo');
 
-        if (showRouteName) tableHTML += `<th data-column="Название трассы">Название трассы</th>`;
-        if (showFirstTry) tableHTML += `<th data-column="Пройдена с первой попытки">Пройдена с первой попытки</th>`;
-        if (showDifficulty) tableHTML += `<th data-column="Оценочная сложность">Оценочная сложность</th>`;
-        if (showComment) tableHTML += `<th data-column="Комментарий">Комментарий</th>`;
-        tableHTML += `<th></th>`;
-        tableHTML += `</tr>`;
-        tableContainer.innerHTML = tableHTML;
+        const tableName = document.createElement('h2');
+        tableName.classList.add('tableName');
+        tableName.textContent = gymName;
 
+        const buttonContainer = document.createElement('div');
+        buttonContainer.classList.add('button-container');
+
+        const addRowButton = document.createElement('button');
+        addRowButton.classList.add('addRow');
+        addRowButton.textContent = 'Добавить строку';
+
+        const deleteTableButton = document.createElement('button');
+        deleteTableButton.classList.add('deleteTable');
+        deleteTableButton.textContent = 'Удалить таблицу';
+
+        buttonContainer.appendChild(addRowButton);
+        buttonContainer.appendChild(deleteTableButton);
+        tableInfo.appendChild(tableName);
+        tableInfo.appendChild(buttonContainer);
+
+        const reportTable = document.createElement('table');
+        reportTable.classList.add('reportTable');
+
+        const headerRow = document.createElement('tr');
+        const categoriesHeader = document.createElement('th');
+        categoriesHeader.setAttribute('data-column', 'Категория трассы');
+        categoriesHeader.textContent = 'Категория трассы';
+        const attemptsHeader = document.createElement('th');
+        attemptsHeader.setAttribute('data-column', 'Количество попыток');
+        attemptsHeader.textContent = 'Количество попыток';
+
+        headerRow.appendChild(categoriesHeader);
+        headerRow.appendChild(attemptsHeader);
+
+        if (showRouteName) {
+            const routeNameHeader = document.createElement('th');
+            routeNameHeader.setAttribute('data-column', 'Название трассы');
+            routeNameHeader.textContent = 'Название трассы';
+            headerRow.appendChild(routeNameHeader);
+        }
+
+        if (showFirstTry) {
+            const firstTryHeader = document.createElement('th');
+            firstTryHeader.setAttribute('data-column', 'Пройдена с первой попытки');
+            firstTryHeader.textContent = 'Пройдена с первой попытки';
+            headerRow.appendChild(firstTryHeader);
+        }
+
+        if (showDifficulty) {
+            const difficultyHeader = document.createElement('th');
+            difficultyHeader.setAttribute('data-column', 'Оценочная сложность');
+            difficultyHeader.textContent = 'Оценочная сложность';
+            headerRow.appendChild(difficultyHeader);
+        }
+
+        if (showComment) {
+            const commentHeader = document.createElement('th');
+            commentHeader.setAttribute('data-column', 'Комментарий');
+            commentHeader.textContent = 'Комментарий';
+            headerRow.appendChild(commentHeader);
+        }
+
+        headerRow.appendChild(document.createElement('th'));
+        reportTable.appendChild(headerRow);
+        tableContainer.appendChild(tableInfo);
+        tableContainer.appendChild(reportTable);
         resultContainer.appendChild(tableContainer);
+
         const table = tableContainer.querySelector('.reportTable');
         addRowToTable(table, showRouteName, showFirstTry, showDifficulty, showComment);
 
@@ -62,15 +113,42 @@ document.addEventListener('DOMContentLoaded', () => {
     function addRowToTable(table, showRouteName, showFirstTry, showDifficulty, showComment) {
         const newRow = table.insertRow(-1);
 
-        newRow.innerHTML = `
-            <td class="editable" data-column="Категория трассы"></td>
-            <td class="editable" data-column="Количество попыток"></td>
-            ${showRouteName ? '<td class="editable" data-column="Название трассы"></td>' : ''}
-            ${showFirstTry ? '<td data-column="Пройдена с первой попытки"></td>' : ''}
-            ${showDifficulty ? '<td class="editable" data-column="Оценочная сложность"></td>' : ''}
-            ${showComment ? '<td class="editable" data-column="Комментарий"></td>' : ''}
-            <td><button class="deleteRow">Удалить</button></td>
-        `;
+        const categoryCell = newRow.insertCell();
+        categoryCell.classList.add('editable');
+        categoryCell.setAttribute('data-column', 'Категория трассы');
+
+        const attemptsCell = newRow.insertCell();
+        attemptsCell.classList.add('editable');
+        attemptsCell.setAttribute('data-column', 'Количество попыток');
+
+        if (showRouteName) {
+            const routeNameCell = newRow.insertCell();
+            routeNameCell.classList.add('editable');
+            routeNameCell.setAttribute('data-column', 'Название трассы');
+        }
+
+        if (showFirstTry) {
+            const firstTryCell = newRow.insertCell();
+            firstTryCell.setAttribute('data-column', 'Пройдена с первой попытки');
+        }
+
+        if (showDifficulty) {
+            const difficultyCell = newRow.insertCell();
+            difficultyCell.classList.add('editable');
+            difficultyCell.setAttribute('data-column', 'Оценочная сложность');
+        }
+
+        if (showComment) {
+            const commentCell = newRow.insertCell();
+            commentCell.classList.add('editable');
+            commentCell.setAttribute('data-column', 'Комментарий');
+        }
+
+        const deleteButtonCell = newRow.insertCell();
+        const deleteButton = document.createElement('button');
+        deleteButton.classList.add('deleteRow');
+        deleteButton.textContent = 'Удалить';
+        deleteButtonCell.appendChild(deleteButton);
 
         newRow.querySelector('.deleteRow').addEventListener('click', () => {
             table.deleteRow(newRow.rowIndex);
@@ -230,24 +308,47 @@ document.addEventListener('DOMContentLoaded', () => {
             const tableContainer = document.createElement('div');
             tableContainer.classList.add('table-container');
 
-            let tableHTML = `<div class="tableInfo">
-                                <h2 class="tableName">${tableInfo.gymName}</h2>
-                                <div class="button-container">
-                                    <button class="addRow">Добавить строку</button>
-                                    <button class="deleteTable">Удалить таблицу</button>
-                                </div>  
-                            </div>
-                            <table border='1' class="reportTable"><tr>`;
+            const tableInfoDiv = document.createElement('div');
+            tableInfoDiv.classList.add('tableInfo');
+
+            const tableName = document.createElement('h2');
+            tableName.classList.add('tableName');
+            tableName.textContent = tableInfo.gymName;
+
+            const buttonContainer = document.createElement('div');
+            buttonContainer.classList.add('button-container');
+
+            const addRowButton = document.createElement('button');
+            addRowButton.classList.add('addRow');
+            addRowButton.textContent = 'Добавить строку';
+
+            const deleteTableButton = document.createElement('button');
+            deleteTableButton.classList.add('deleteTable');
+            deleteTableButton.textContent = 'Удалить таблицу';
+
+            buttonContainer.appendChild(addRowButton);
+            buttonContainer.appendChild(deleteTableButton);
+            tableInfoDiv.appendChild(tableName);
+            tableInfoDiv.appendChild(buttonContainer);
+
+            const reportTable = document.createElement('table');
+            reportTable.classList.add('reportTable');
+
+            const headerRow = reportTable.insertRow();
 
             const columnNames = Object.keys(tableInfo.rows[0] || {});
             columnNames.forEach(columnName => {
                 if (columnName) {
-                    tableHTML += `<th data-column="${columnName}">${columnName}</th>`;
+                    const headerCell = document.createElement('th');
+                    headerCell.setAttribute('data-column', columnName);
+                    headerCell.textContent = columnName;
+                    headerRow.appendChild(headerCell);
                 }
             });
-            tableHTML += `<th></th>`;
-            tableHTML += `</tr>`;
-            tableContainer.innerHTML = tableHTML;
+
+            headerRow.appendChild(document.createElement('th'));
+            tableContainer.appendChild(tableInfoDiv);
+            tableContainer.appendChild(reportTable);
             resultContainer.appendChild(tableContainer);
 
             const table = tableContainer.querySelector('.reportTable');
