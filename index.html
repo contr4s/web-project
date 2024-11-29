@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/styles.css">
     <script src="/scripts/loadStats.js" defer></script>
     <script src="/scripts/activeMenu.js"></script>
+    <script src="/scripts/fetchData.js" defer></script>
 </head>
 
 <body>
@@ -86,31 +87,8 @@
 
         <section class="l-mobile-hidden l-sidebar-right recommendations">
             <h3 class="section-title">Рекомендации друзей</h3>
-            <ul class="content-list">
-                <li class="content-list-item shadow">
-                    <div class="l-post-header">
-                        <img src="resources/avatar.png" alt="Аватар друга 1" class="user-avatar">
-                        <a class="user-name">Анна Иванова</a>
-                    </div>
-                    <p class="user-stats">Пройдено трасс: 15</p>
-                    <p class="user-stats">Средняя сложность: 5A</p>
-                    <p class="user-info">Город: Санкт-Петербург</p>
-                    <p class="user-info">Любимый скалодром: <a class="climbing-wall" href="/climbing_wall.html">Северная
-                            стена</a></p>
-                    <button class="add-friend-button">Добавить в друзья</button>
-                </li>
-                <li class="content-list-item shadow">
-                    <div class="l-post-header">
-                        <img src="resources/avatar.png" alt="Аватар друга 2" class="user-avatar">
-                        <a class="user-name">Андрей Иванов</a>
-                    </div>
-                    <p class="user-stats">Пройдено трасс: 150</p>
-                    <p class="user-stats">Средняя сложность: 6A</p>
-                    <p class="user-info">Город: Санкт-Петербург</p>
-                    <p class="user-info">Любимый скалодром: <a class="climbing-wall" href="/climbing_wall.html">Северная
-                            стена</a></p>
-                    <button class="add-friend-button">Добавить в друзья</button>
-                </li>
+            <div id="preloader" class="loader"></div>
+            <ul class="content-list friend-recomedations">
             </ul>
         </section>
     </main>
