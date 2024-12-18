@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     preloader.style.display = "block";    
 
     try {
-        const response = await fetch(`https://run.mocky.io/v3/c102cbb7-b5cf-4804-9a2a-5d41682a1583`);
+        const response = await fetch(`https://run.mocky.io/v3/8a952b13-b834-4d27-8ce7-c254830f9f37`);
         
         await new Promise(resolve => setTimeout(resolve, 2000));
 
@@ -110,8 +110,8 @@ function createUserInfo(city, favoriteClimbingWall) {
     
     const climbingWallLink = document.createElement('a');
     climbingWallLink.className = 'climbing-wall';
-    climbingWallLink.textContent = favoriteClimbingWall.name;
-    climbingWallLink.href = favoriteClimbingWall.link;
+    climbingWallLink.textContent = favoriteClimbingWall;
+    climbingWallLink.href = "/climbing_wall.html";
 
     climbingWallInfo.appendChild(climbingWallLink);
     
